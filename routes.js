@@ -11,7 +11,10 @@ router.get("/", (req, res) => {
     res.write(`
       <!DOCTYPE html>
       <html>
+      <head>
+      <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Parking_icon.svg/2048px-Parking_icon.svg.png">
       <title> John & Lori's Wedding Parking Instructions </title>
+      </head>
       <meta name="title" content="John & Lori's Wedding Parking Instructions">
       <meta name="description" content="Parking instructions for John & Lori's Wedding">
       <center>
