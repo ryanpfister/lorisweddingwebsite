@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
     res.write(`
       <!DOCTYPE html>
       <html>
+      <title> John & Lori's Wedding Parking Instructions </title>
       <meta name="title" content="John & Lori's Wedding Parking Instructions">
       <meta name="description" content="Parking instructions for John & Lori's Wedding">
       <center>
