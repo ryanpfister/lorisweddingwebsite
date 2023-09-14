@@ -79,11 +79,8 @@ router.get("/", (req, res) => {
             <div>
             <center>
             <h1 style="color: green">Instructions</h1>
-            <object data=
-    "https://wedding.rdpfister.com/uploads/Parking-Instructions.pdf" 
-                    width="800"
-                    height="500">
-            </object>
+            <object width="900" height="900" data="https://docs.google.com/gview?embedded=true&url=https://wedding.rdpfister.com/uploads/Parking-Instructions.pdf"></object>
+
         </center>
     </div>
         </div>
