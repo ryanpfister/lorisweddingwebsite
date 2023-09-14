@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
   
 // define PORT number to listen to the requests
-const PORT = process.env.PORT || 3000;
+const PORT = 80;
   
 // to serve files from uploads directory
 app.use("/uploads", express.static("uploads"));
