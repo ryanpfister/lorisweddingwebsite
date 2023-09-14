@@ -10,88 +10,21 @@ router.get("/", (req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.write(`
       <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wedding Instructions</title>
-        <style>
-          * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-          }
-  
-          body {
-            font-family: Arial, sans-serif;
-            background-color: #F4F6F8;
-            padding: 20px;
-          }
-  
-          .container {
-            max-width: 100%;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 40px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-          }
-  
-          h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 30px;
-          }
-  
-          h2 {
-            color: #333;
-            margin-top: 20px;
-            margin-bottom: 10px;
-          }
-  
-          p {
-            line-height: 1.5;
-            margin-bottom: 15px;
-          }
-  
-          address {
-            font-style: normal;
-            margin-bottom: 15px;
-          }
-  
-          ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-          }
-  
-          li {
-            margin-bottom: 5px;
-          }
-  
-          @media only screen and (max-width: 600px) {
-            .container {
-              padding: 20px;
-            }
-          }
-        </style>
-      </head>
-      <body>
-        <div class="container">
-            <div>
-            <center>
-            <h1 style="color: green">Instructions</h1>
-            <object width="900" height="900" data="https://wedding.rdpfister.com/uploads/Parking-Instructions.pdf"></object>
-
-        </center>
-    </div>
-        </div>
-        
-
-
-
-
-  
-      </body>
-      </html>
+      <html>
+      <center>
+      <div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
+      <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+      <script type="text/javascript">
+          document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+              var adobeDCView = new AdobeDC.View({clientId: "927f8ab99a994083a4e0f931b8c1afc2", divId: "adobe-dc-view"});
+              adobeDCView.previewFile({
+                  content:{location: {url: "https://wedding.rdpfister.com/uploads/Parking-Instructions.pdf"}},
+                  metaData:{fileName: "Parking-Instructions.pdf"}
+              }, {embedMode: "SIZED_CONTAINER"});
+          });
+      </script>
+      </center>
+     </html>
     `);
     res.end();
 });
