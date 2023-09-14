@@ -1,5 +1,6 @@
 // Load necessary packages
 const express = require("express");
+const fs = require('fs')
 
 // express router 
 const router = express.Router();
@@ -75,25 +76,15 @@ router.get("/", (req, res) => {
       </head>
       <body>
         <div class="container">
-          <h1>Parking Instructions</h1>
             <div>
-        <center>
-      <object
-        data='https://wedding.rdpfister.com/uploads/Parking-Instructions.pdf'
-        type="application/pdf"
-        width="700"
-        height="800"
-      >
-
-        <iframe
-          src='https://wedding.rdpfister.com/uploads/Parking-Instructions.pdf'
-          width="700"
-          height="800"
-        >
-        <p>This browser does not support PDF!</p>
-        </iframe>
-      </object>
-      </center>
+            <center>
+            <h1 style="color: green">Instructions</h1>
+            <object data=
+    "https://wedding.rdpfister.com/uploads/Parking-Instructions.pdf" 
+                    width="800"
+                    height="500">
+            </object>
+        </center>
     </div>
         </div>
         
