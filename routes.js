@@ -28,7 +28,7 @@ router.get("/", (req, res) => {
           }
   
           .container {
-            max-width: 800px;
+            max-width: 1440px;
             margin: 0 auto;
             background-color: #fff;
             padding: 40px;
@@ -77,6 +77,7 @@ router.get("/", (req, res) => {
         <div class="container">
           <h1>Parking Instructions</h1>
             <div>
+        <center>
       <object
         data='https://wedding.rdpfister.com/uploads/Parking-Instructions.pdf'
         type="application/pdf"
@@ -92,6 +93,7 @@ router.get("/", (req, res) => {
         <p>This browser does not support PDF!</p>
         </iframe>
       </object>
+      </center>
     </div>
         </div>
         
